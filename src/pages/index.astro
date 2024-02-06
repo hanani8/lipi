@@ -1,16 +1,20 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
 
 import Hero from '~/components/widgets/Hero.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
 import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import { Image } from 'astro:assets';
 
 const metadata = {
   title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
@@ -25,28 +29,40 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
+        text: 'Enroll Now',
+        href: 'https://docs.google.com/forms/d/e/1FAIpQLSeMEZkF_qchLCa_LCXDdmK-8BL2qbMIMgzpOi0Toh4v_aOm8g/viewform?usp=sf_link',
         target: '_blank',
-        icon: 'tabler:download',
+        icon: 'tabler:link',
       },
-      { text: 'Learn more', href: '#features' },
+      { text: 'Contact Us', href: '/contact' },
     ]}
-    image={{ src: '~/assets/images/hero.png', alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 4.0</span> + Tailwind CSS
+      Welcome to
+      <span class="text-accent dark:text-white highlight"> Lipi Schools</span>
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 4.0
-        + Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-       Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages
-      & Blogs.
+        <span class="font-semibold">Lipi</span> is a Nursery to VII Class (English Medium) school
+      </span>
+      located in the heart of <span class="font-bold text-blue-600">Beeramguda, Ameepur(M)</span> with a vision to provide
+      a holistic education to children.
+    </Fragment>
+
+    <Fragment slot="image">
+      <div class="relative h-0 pb-[56.25%]">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/dsTXcSeAZq8"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+          allowfullscreen
+          class="absolute top-0 left-0 w-full h-full"
+        >
+        </iframe>
+      </div>
     </Fragment>
   </Hero>
 
@@ -56,72 +72,28 @@ const metadata = {
 
   <!-- Features Widget *************** -->
 
-  <Features
-    id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
-    items={[
-      {
-        title: 'Astro + Tailwind CSS Integration',
-        description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
-      },
-      {
-        title: 'Ready-to-use Components',
-        description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
-      },
-      {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Excellent Page Speed',
-        description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
-      },
-    ]}
-  />
-
   <!-- Content Widget **************** -->
 
   <Content
     isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
+    id="why-lipi"
+    tagline="Why Choose Us?"
+    title="What makes Lipi truly distinctive?"
     items={[
       {
-        title: 'Built on top of Astro 4.0',
-        description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+        title: 'Individualized attention to each child',
+        // description:
+        // 'Student-teacher ratio is maintained at a , ensuring that each child gets the attention he/she deserves.',
       },
       {
-        title: 'Styled using Tailwind CSS',
+        title: 'A safe and secure learning environment, with focus on student well-being',
         description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+          'We strive to provide a nurturing environment that encourages each child to grow to his/her full potential.',
       },
       {
-        title: 'Cross-browser compatibility',
-        description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+        title: 'Upholds Indian cultural values, while fostering global citizenship',
+        // description:
+        // 'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
       },
     ]}
     image={{
@@ -130,8 +102,7 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-       Gain a competitive advantage by incorporating industry leading practices
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Learning Environment</h3>
     </Fragment>
 
     <Fragment slot="bg">
@@ -145,23 +116,21 @@ const metadata = {
     isAfterContent
     items={[
       {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
+        title: 'Talented, experienced and dedicated faculty',
+        // description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
       },
       {
-        title: 'Multiple layout possibilities',
-        description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
+        title: 'Offers an integrated curriculum from LKG to Class V',
+        // description:
+        // 'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
       },
       {
-        title: 'Fully responsive design',
-        description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
+        title: 'Full-time IIT foundation programme from Class VI onwards',
+        description: 'And other competitive exams like Olympiads, NTSE, KVPY, etc. are also prepared for.',
       },
       {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
+        title: 'Reasoning classes from Class III onwards',
+        description: 'Helping students to develop their logical thinking and problem-solving skills.',
       },
     ]}
     image={{
@@ -169,7 +138,9 @@ const metadata = {
       alt: 'Blueprint Image',
     }}
   >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Teaching</h3>
+    </Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -183,23 +154,16 @@ const metadata = {
     isAfterContent
     items={[
       {
-        title: 'Enhanced user engagement',
-        description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
+        title: 'Physics, Chemistry, Biology and Computer labs',
+        // description:
+        // 'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
       },
       {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
+        title: 'Each child will be encouraged to compete with himself/herself. ',
+        description: 'We believe that every child is unique and has the potential to excel in his/her own way.',
       },
       {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
+        title: 'Children will be encouraged to grow to be self-reliant and independent in thought',
       },
     ]}
     image={{
@@ -207,34 +171,145 @@ const metadata = {
       alt: 'Astronauts Image',
     }}
   >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Personal Growth</h3>
+    </Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
+  <Hero2
+    tagline="Welcome from the Chairman"
+    image={{
+      src: 'https://images.unsplash.com/photo-1580481072645-022f9a6dbf27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'AstroWind Hero Image',
+    }}
+  >
+    <Fragment slot="title"> Chariman's Voice </Fragment>
+
+    <Fragment slot="subtitle">
+      “Intelligence plus character that is the goal of true education”, these words are foundation stones of Lipi
+      School.
+    </Fragment>
+
+    <Fragment slot="content">
+      <div class="flex flex-col gap-4 text-left">
+        <p>
+          The core purpose of education is to provide children with a learning environment which brings out the best in
+          them. We believe that every child is endowed with a unique set of attributes and abilities, which need to be
+          nurtured so that they blossom.
+        </p>
+        <p>
+          We provide a learning environment that inspires and motivates children and encourages them to explore
+          limitless possibilities in their quest for knowledge.
+        </p>
+        <p>
+          In Lipi, teaching is a pleasure and learning is a joy, excelling is a passion and culture and values have a
+          pre-eminent place.
+        </p>
+        <p>
+          In Lipi, every child deserves an education that fosters academic excellence and all-round delvelopment and
+          ensures their well being.
+        </p>
+        <p>
+          I warmly invite you to explore Lipi as we re-dedicate ourselves everyday, to impact the best education to
+          young minds
+        </p>
+        <p class="font-bold text-lg">- MVV Satyanarayana</p>
+      </div>
+    </Fragment>
+  </Hero2>
+
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    id="amenities"
+    title="Lipi's Unique Features"
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
+        title: 'NEP 2020 Methodology',
+        // description:
+        // "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
         icon: 'tabler:package',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</em>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
+        title: 'AC Class Rooms',
+        // description:
+        // "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
         icon: 'tabler:letter-case',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
+        title: 'Seminar Halls',
+        // description:
+        // 'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Experienced, Dedicated and Committed team of teachers and councellers',
+        // description:
+        // "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Activity-based learning',
+        // description:
+        // "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: 'Digitally equipped classromms',
+        // description:
+        // 'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Music and Dance classes',
+        // description:
+        // "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Yoga, Art and Craft classes',
+        // description:
+        // "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: 'Kids Game zone',
+        // description:
+        // 'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Science, Mathematics, and Computer Labs',
+        // description:
+        // "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Transport Facility',
+        // description:
+        // "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: 'Mineral Water Plant',
+        // description:
+        // 'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Fully Sanitized Washrooms',
+        // description:
+        // "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: 'CCTV Surveillance',
+        // description:
+        // 'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
         icon: 'tabler:paint',
       },
       {
@@ -248,62 +323,74 @@ const metadata = {
     }}
   />
 
+  <Features
+    id="curriculum"
+    tagline="Joy of Learning"
+    title="Academic Curriculum & Learnig with Labs"
+    items={[
+      {
+        title: 'NEP 2020',
+        description:
+          'Lipi School believes in holistic, integrated, enjoyable and engaging curriculum. Based on NEP 2020 we designed our curriculum and pedagogy.',
+        icon: 'tabler:brand-tailwind',
+      },
+      {
+        title: '21st-Century Ready',
+        description:
+          'Our academic curriculum aims to equip children with 21st-century skills, fostering creativity, critical thinking, effective communication, collaboration, and leadership.',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Pedagogy',
+        description:
+          'The key pillars of our pedagogy are learning through inquiry, conceptual understanding, differentiated instruction and technology integration.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Experiential Learning',
+        description:
+          'Facilitating students in conducting their own experiments enhances their ability to retain and understand studies. This hands-on experience provides superior learning opportunities, promoting a more effective grasp of the material.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Learning Beyond Answers',
+        description:
+          'In a laboratory, the goal is not a competition for the right answer. Instead, it serves as a platform to acquire knowledge, cultivate observation skills, and understand the significance of phenomena.',
+        icon: 'tabler:arrows-right-left',
+      },
+    ]}
+  />
+
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
+    title="Holistic Development of Children"
+    subtitle="A focus on physical, emotional, and social development, as well as cognitive growth is central to Lipi Education."
+    tagline="Some of Our Popular Extra-Curricular Activities"
     items={[
       {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
+        title: 'Reading Club',
+        description:
+          'Reading is a very important activity in a child’s life, and something that needs to be developed from an early age. To aid to this, we have setup a spacious library with copious books',
         icon: 'flat-color-icons:template',
       },
       {
-        title: 'Heros',
+        title: 'Sports',
         description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
+          'A healthy mind can only reside in a healthy body. We encourage each and every child to participate in sporting activities with special emphasis placed on developing sporting interest in girl students',
         icon: 'flat-color-icons:approval',
       },
       {
-        title: 'Content',
+        title: 'Yoga',
         description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
+          'Yoga reduces stress and anxiety, improves memory and self control, promotes mindfulness, boosts immunity and increases self-confidence and self-esteem',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Music, Dance & Art',
+        description:
+          'Music, dance, and art education provide children with exposure to diverse global artistic traditions, fostering appreciation for different cultures and promoting a sense of global citizenship. Collaborating on artistic projects teaches cooperation, communication, and compromise, instilling values crucial for both personal and professional development.',
         icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
       },
     ]}
   >
@@ -312,7 +399,32 @@ const metadata = {
     </Fragment>
   </Features2>
 
-  <!-- HighlightedPosts Widget ******* -->
+  <Steps2
+    title="Our Values"
+    subtitle="Believe. Learn. Achieve."
+    callToAction={{
+      text: 'Know more',
+      href: '/contact',
+    }}
+    items={[
+      {
+        title: 'Vision',
+        description:
+          'Our Vision is to develop global leaders for tomorrow. We aspire to be a school from which students gain Discipline, Values, Social Responsibility, Knowledge, Communication and Self confidence.',
+      },
+      {
+        title: 'Mission',
+        description:
+          'The School’s mission is to provide a learning environment that encourages children to bring out the best in themselves and enables their all round development through the joy of learning, enduring values and celebration of diversity',
+      },
+      {
+        title: 'Motto',
+        description: 'Value education with scientific thoughts...',
+      },
+    ]}
+  />
+
+  <!-- HighlightedPosts Widget *******
 
   <BlogLatestPosts
     title="Find out more content in our Blog"
@@ -321,8 +433,6 @@ const metadata = {
                         Astro is a very interesting technology. Thanks.
                 `}
   />
-
-  <!-- FAQs Widget ******************* -->
 
   <FAQs
     title="Frequently Asked Questions"
@@ -361,39 +471,7 @@ const metadata = {
           "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
       },
     ]}
-  />
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
-    ]}
-  />
+  /> -->
 
   <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
-    </Fragment>
-  </CallToAction>
 </Layout>

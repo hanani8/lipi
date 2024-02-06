@@ -1,0 +1,52 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Careers',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText tagline="Careers" title="Exciting Opportunities" />
+
+  <!-- GForm for Careers -->
+  <CallToAction
+    title="Join Our Team"
+    subtitle="We are always looking for talented individuals to join our team. If you are passionate about education and want to make a difference, we would love to hear from you."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Hire me',
+        href: 'https://docs.google.com/forms/d/e/1FAIpQLSfw_X82_Rl3XKmdqhLhnnvaysSiUSxjf5l60JJzTZ_ndoHdfg/viewform?usp=sf_link',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Currently Open Positions"
+    items={[
+      {
+        title: 'Math Instructor',
+        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
+      },
+      {
+        title: 'Chemistry Teacher',
+        description:
+          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
+      },
+      {
+        title: 'Technical support',
+        description:
+          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
+      },
+    ]}
+  />
+</Layout>
