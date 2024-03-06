@@ -3,6 +3,7 @@ import Layout from '~/layouts/Layout.astro';
 import Header from '~/components/widgets/Header.astro';
 import Footer from '~/components/widgets/Footer.astro';
 import Announcement from '~/components/widgets/Announcement.astro';
+import { Icon } from 'astro-icon/components';
 
 import { headerData, footerData } from '~/navigation';
 
@@ -25,6 +26,16 @@ const { metadata } = Astro.props;
   <main>
     <slot />
   </main>
+  <div class="fixed bottom-2 right-2">
+    <div class="flex flex-column gap-2 z-20">
+      <a href="https://wa.me/918977131320" target="_blank" rel="noopener noreferrer">
+        <Icon name="tabler:brand-whatsapp" class="w-8 h-8" />
+      </a>
+      <a href="tel:8977131320" target="_blank" rel="noopener noreferrer">
+        <Icon name="tabler:phone" class="w-8 h-8" />
+      </a>
+    </div>
+  </div>
   <slot name="footer">
     <Footer {...footerData} />
   </slot>

@@ -1,9 +1,12 @@
 ---
 import { SITE } from '~/utils/config';
+import LogoImage from '../assets/images/logo.png';
+import { Image } from 'astro:assets';
 ---
 
 <span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
+  class="flex flex-row gap-2 self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
 >
-  🚀 {SITE?.name}
+  <Image src={LogoImage} class="w-16 h-16" alt="logo" />
+  <span class="self-center">{SITE?.name}</span>
 </span>

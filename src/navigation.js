@@ -10,12 +10,20 @@ export const headerData = {
           href: getPermalink('/#why-lipi'),
         },
         {
+          text: "Chairman's Voice",
+          href: getPermalink('/#chairmans-voice'),
+        },
+        {
           text: 'Amenities',
           href: getPermalink('/#amenities'),
         },
         {
           text: 'Curriculum',
           href: getPermalink('/#curriculum'),
+        },
+        {
+          text: 'Our Values',
+          href: getPermalink('/#our-values'),
         },
       ],
     },

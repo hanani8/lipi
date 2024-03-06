@@ -1,6 +1,6 @@
 site:
   name: Lipi Schools
-  site: 'https://astrowind.vercel.app'
+  site: 'https://lipischoo.in'
   base: '/'
   trailingSlash: false
 
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Lipi Schools
+    template: '%s — Lipi Schools'
+  description: "\U0001F680 An English Medium school located in the heart of Beeramguda, Ameenpur(M) with a vision to provide quality education to the children. \U0001F4DA"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Lipi Schools
     images:
       - url: '~/assets/images/default.png'
         width: 1200
